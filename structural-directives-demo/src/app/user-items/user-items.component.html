@@ -1,0 +1,15 @@
+<table border=1>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Address</th>
+    </tr>
+    <tr *ngFor = "let employee of employees">
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.salary}}</td>
+        <td *ngIf = "employee.address">{{employee.address.state}}</td>
+        <td *ngIf = "employee.address">{{employee.address.city}}</td>
+    </tr>
+</table>
