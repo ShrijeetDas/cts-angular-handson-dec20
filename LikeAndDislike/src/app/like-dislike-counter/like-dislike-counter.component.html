@@ -1,0 +1,14 @@
+<div>
+    <h3>Likes : {{noOfLikes}}</h3>
+    <h3>Dislikes : {{noOfDislikes}}</h3>
+    <button (click) = "handleClear()">Clear</button>
+</div>
+<br/>
+<div>
+    <app-like-dislike-button
+        (likeCounter) = "noOfLikes = $event"
+        (dislikeCounter) = "noOfDislikes = $event"
+        [dislikes] = "noOfDislikes"
+        [likes] = "noOfLikes">
+    </app-like-dislike-button>
+</div>
